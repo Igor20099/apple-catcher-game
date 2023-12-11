@@ -1,0 +1,22 @@
+go.property("speed", 300)
+
+function fixed_update(self, dt)
+	local pos = go.get_position()
+	pos.y = pos.y - dt * self.speed
+	go.set_position(pos)
+end
+
+function update(self, dt)
+	local pos = go.get_position()
+	if pos.y < 0 then
+		go.delete()
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("collision_response") then
+		sound.play("#sound")
+		msg.post("gui#score", "add_score")
+		go.delete()
+	end
+end

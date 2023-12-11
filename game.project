@@ -1,0 +1,22 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 500
+height = 500
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = Apple Catcher
+
+[html5]
+scale_mode = no_scale
+show_fullscreen_button = 0
+show_made_with_defold = 0
+show_console_banner = 0
+

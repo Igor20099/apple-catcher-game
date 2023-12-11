@@ -1,0 +1,9 @@
+local function create_apple()
+	local random_x = math.random(100, 400)
+	factory.create("#apple_creator",vmath.vector3(random_x,300,0))
+end
+
+function init(self)
+	create_apple()
+	timer.delay(3, true, create_apple)
+end

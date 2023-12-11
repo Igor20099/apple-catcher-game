@@ -1,0 +1,11 @@
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if action.x  then
+		local pos = vmath.vector3(action.x,70,0.5)
+		go.set_position(pos)
+	end
+end

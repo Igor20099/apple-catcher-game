@@ -1,0 +1,16 @@
+function init(self)
+	self.score = 0
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("add_score") then
+		local text = gui.get_node("score")
+		self.score = self.score + 1
+		gui.set_text(text, "SCORE: ".. self.score)
+	end
+	
+end
+
+
+
